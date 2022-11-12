@@ -1,0 +1,114 @@
+*   {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.container  {
+    max-width: 1120px;
+    width: 100%;
+    margin: auto;
+}
+
+.row    {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu   {
+    width: 100%;
+    background: #202020;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.menu-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_li    {
+    width: 70%;
+
+}
+
+.menu_li.active {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+}
+
+.menu_li ul {
+    display: flex;
+}
+
+.menu_li ul a   {
+    margin: 0 11px;
+    padding: 10px;
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.5s;
+    /* -webkit-transform: 0.5s;
+    -moz-transform: 0.5s;
+    -ms-transform: 0.5s;
+    -o-transform: 0.5s; */
+    display: flex;
+    justify-content: center;
+}
+
+.menu_li ul a:hover {
+    background: crimson;
+}
+
+.menu_btn   {
+    color: darkgray;
+    border: 1px solid #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-style: 18px;
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .menu_li {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #111111;
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        z-index: 10;
+        transition: 0.5s;
+        -webkit-transform: 0.5s;
+        -moz-transform: 0.5s;
+        -ms-transform: 0.5s;
+        -o-transform: 0.5s;
+    }
+
+    .menu_li ul {
+        flex-direction: column;
+        
+    }
+
+    .menu_btn {
+        display: block;
+        z-index: 100;
+    }
+}
+
